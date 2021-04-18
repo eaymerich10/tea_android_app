@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aymerich.ioc.cat.tea2_clientm_aymerichs.activities.MainActivity">
+
+
+    <Button
+        android:id="@+id/b_reservar_sales_user"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="231dp"
+        android:text="@string/reservar_sales" />
+
+    <Button
+        android:id="@+id/b_veure_reserves_user"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b_reservar_sales_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/veure_reserves_user" />
+
+
+    <Button
+        android:id="@+id/b_logout_user"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="409dp"
+        android:text="@string/tancar_sessi" />
+
+    <Button
+        android:id="@+id/b_veure_factures"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="349dp"
+        android:text="@string/veure_factures" />
+
+    <Button
+        android:id="@+id/b_sortida_user"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="467dp"
+        android:text="@string/sortir" />
+
+    <TextView
+        android:id="@+id/reserves_tv"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginRight="218dp"
+        android:text="@string/inici"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/b_canviar_pass_user"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/canviar_contrasenya" />
+
+    <TextView
+        android:id="@+id/tv_titol_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp"
+        android:text="@string/fem_coworking_user"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/nom_usuari_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/boto_canvi_user"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/canviar_contrasenya" />
+
+    <EditText
+        android:id="@+id/et_canvi_pass_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bt_enviar_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="259dp"
+        android:text="@string/enviar"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bt_cancelar_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="323dp"
+        android:text="@string/cancelar"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/introduex_pass_tv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginLeft="94dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/introdueix_la_nova_contrasenya"
+        android:visibility="invisible" />
+
+</RelativeLayout>

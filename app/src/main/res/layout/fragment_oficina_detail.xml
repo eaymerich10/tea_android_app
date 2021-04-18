@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OficinaDetail">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/id_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="88dp"
+            android:text="@string/idoficina" />
+
+        <TextView
+            android:id="@+id/id_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/id_oficina_frag"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toEndOf="@+id/id_oficina_frag" />
+
+        <TextView
+            android:id="@+id/nom_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_oficina_frag"
+            android:layout_alignParentStart="@+id/id_oficina_frag"
+            android:layout_alignParentLeft="@+id/id_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/nom_de_la_oficina" />
+
+        <TextView
+            android:id="@+id/nom_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_oficina_frag_value"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/id_oficina_frag_value"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/tipus_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nom_oficina_frag"
+            android:layout_alignParentStart="@+id/nom_oficina_frag"
+            android:layout_alignParentLeft="@+id/nom_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/tipus_d_oficina" />
+
+        <TextView
+            android:id="@+id/tipus_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nom_oficina_frag"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/nom_oficina_frag"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/capacitat_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tipus_oficina_frag"
+            android:layout_alignParentStart="@+id/tipus_oficina_frag"
+            android:layout_alignParentLeft="@+id/tipus_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/capacitat" />
+
+        <TextView
+            android:id="@+id/capacitat_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tipus_oficina_frag"
+            android:layout_alignBottom="@+id/capacitat_oficina_frag"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/tipus_oficina_frag"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="-1dp" />
+
+        <TextView
+            android:id="@+id/preu_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/capacitat_oficina_frag"
+            android:layout_alignParentStart="@+id/capacitat_oficina_frag"
+            android:layout_alignParentLeft="@+id/capacitat_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/preu_per_dia" />
+
+        <TextView
+            android:id="@+id/preu_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/capacitat_oficina_frag_value"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/capacitat_oficina_frag_value"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/serveis_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/preu_oficina_frag"
+            android:layout_alignParentStart="@+id/preu_oficina_frag"
+            android:layout_alignParentLeft="@+id/preu_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/serveis_de_la_oficina" />
+
+        <TextView
+            android:id="@+id/serveis_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/preu_oficina_frag_value"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/preu_oficina_frag_value"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/habilitada_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/serveis_oficina_frag"
+            android:layout_alignParentStart="@+id/serveis_oficina_frag"
+            android:layout_alignParentLeft="@+id/serveis_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/habiltada" />
+
+        <TextView
+            android:id="@+id/habilitada_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/serveis_oficina_frag_value"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/serveis_oficina_frag_value"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/provincia_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/habilitada_oficina_frag"
+            android:layout_alignParentStart="@+id/habilitada_oficina_frag"
+            android:layout_alignParentLeft="@+id/habilitada_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/provincia_oficina" />
+
+        <TextView
+            android:id="@+id/provincia_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/habilitada_oficina_frag_value"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/habilitada_oficina_frag_value"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/poblacio_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/provincia_oficina_frag"
+            android:layout_alignParentStart="@+id/provincia_oficina_frag"
+            android:layout_alignParentLeft="@+id/provincia_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/poblacio_oficina" />
+
+        <TextView
+            android:id="@+id/poblacio_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/provincia_oficina_frag_value"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/provincia_oficina_frag_value"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/direccio_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/poblacio_oficina_frag"
+            android:layout_alignParentStart="@+id/poblacio_oficina_frag"
+            android:layout_alignParentLeft="@+id/poblacio_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/direccio" />
+
+        <TextView
+            android:id="@+id/direccio_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/poblacio_oficina_frag_value"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/poblacio_oficina_frag_value"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/eliminada_oficina_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/direccio_oficina_frag"
+            android:layout_alignParentStart="@+id/direccio_oficina_frag"
+            android:layout_alignParentLeft="@+id/direccio_oficina_frag"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/eliminada" />
+
+        <TextView
+            android:id="@+id/eliminada_oficina_frag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/direccio_oficina_frag_value"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="@+id/direccio_oficina_frag_value"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp" />
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

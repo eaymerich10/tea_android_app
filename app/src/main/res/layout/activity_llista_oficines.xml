@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LlistaOficines">
+
+    <ListView
+        android:id="@+id/lv_llista_oficines"
+        android:layout_width="match_parent"
+        android:layout_height="389dp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="aymerich.ioc.cat.tea2_clientm_aymerichs.OficinaDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lv_llista_oficines"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

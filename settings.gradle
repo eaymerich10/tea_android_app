@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "TEA2_ClientM_AymerichS"

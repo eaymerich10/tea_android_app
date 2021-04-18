@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aymerich.ioc.cat.tea2_clientm_aymerichs.activities.MainActivity">
+
+
+    <Button
+        android:id="@+id/b_crear_oficina"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="203dp"
+        android:text="@string/crear_oficina" />
+
+    <Button
+        android:id="@+id/b_obtenir_sales"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b_crear_oficina"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/llistar_sales" />
+
+    <TextView
+        android:id="@+id/reserves_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="147dp"
+        android:text="Gestió de Sales"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_titol_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp"
+        android:text="@string/fem_coworking_user"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+</RelativeLayout>
