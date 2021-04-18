@@ -1,4 +1,4 @@
-package aymerich.ioc.cat.tea2_clientm_aymerichs;
+package aymerich.ioc.cat.tea2_clientm_aymerichs.tools;
 
 import org.json.JSONException;
 import org.json.JSONObject;

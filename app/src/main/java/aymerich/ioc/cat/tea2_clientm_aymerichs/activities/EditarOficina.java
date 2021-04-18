@@ -19,7 +19,7 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 
-import aymerich.ioc.cat.tea2_clientm_aymerichs.Parser;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.Parser;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.EditarOficinaApi;

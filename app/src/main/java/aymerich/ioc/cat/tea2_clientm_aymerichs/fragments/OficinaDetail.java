@@ -1,4 +1,4 @@
-package aymerich.ioc.cat.tea2_clientm_aymerichs;
+package aymerich.ioc.cat.tea2_clientm_aymerichs.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 
 /**
  * A simple {@link Fragment} subclass.
