@@ -13,6 +13,11 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.oficines.LlistatOficinesApi;
 
+/**
+ *
+ * Classe encarregada de l'activitat per gestionar les oficines des de l'administrador
+ *
+ */
 public class OficinesAdmin extends AppCompatActivity {
 
     Button b_llistar_sales;
@@ -23,6 +28,11 @@ public class OficinesAdmin extends AppCompatActivity {
     LlistatOficinesApi llistatSales = null;
     CreaOficina creaOficina = null;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

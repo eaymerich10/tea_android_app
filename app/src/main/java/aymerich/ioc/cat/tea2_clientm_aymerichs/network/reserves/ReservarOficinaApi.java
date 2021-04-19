@@ -1,4 +1,4 @@
-package aymerich.ioc.cat.tea2_clientm_aymerichs.network.users;
+package aymerich.ioc.cat.tea2_clientm_aymerichs.network.reserves;
 
 import android.content.Context;
 import android.os.Bundle;

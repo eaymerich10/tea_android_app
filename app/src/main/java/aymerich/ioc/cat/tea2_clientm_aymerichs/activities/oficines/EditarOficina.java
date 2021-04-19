@@ -25,8 +25,9 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.oficines.EditarOficinaApi;
 
 /**
- * Clase Registre
- * Formulari de registre
+ *
+ * Classe encarregada de l'activitat per Editar Oficines
+ *
  */
 public class EditarOficina extends AppCompatActivity {
 
@@ -46,7 +47,8 @@ public class EditarOficina extends AppCompatActivity {
     private ArrayList tipus_oficines;
     private ArrayAdapter adapter;
     private ListView lv1;
-    public static Activity fa;
+    public static Activity fa; //La farem servir per tancar l'activitat
+
     /**
      * On create.
      *
@@ -122,6 +124,15 @@ public class EditarOficina extends AppCompatActivity {
     }
 
 
+    /**
+     * No null text boolean.
+     *
+     * @param nom       the nom
+     * @param tipus     the tipus
+     * @param capacitat the capacitat
+     * @param preu      the preu
+     * @return the boolean
+     */
     public boolean NoNullText(String nom, String tipus, String capacitat, String preu) {
         if (nom.length() < 1 || tipus.length() < 1 || capacitat.length() < 1 || preu.length() < 1) {
             //Si algun camp es buit, marcara l'error a la pantalla
@@ -143,6 +154,12 @@ public class EditarOficina extends AppCompatActivity {
             return true;
         }
     }
+
+    /**
+     * Omplir camps.
+     *
+     * @param oficina the oficina
+     */
     public void omplirCamps(Oficina oficina){
         et_nom.setText(oficina.getNom());
         tipus = oficina.getTipus();

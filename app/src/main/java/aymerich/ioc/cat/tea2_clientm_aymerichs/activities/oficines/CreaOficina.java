@@ -23,8 +23,9 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.oficines.CreaOficinaApi;
 
 /**
- * Clase Registre
- * Formulari de registre
+ *
+ * Classe encarregada de l'activitat per crear oficines
+ *
  */
 public class CreaOficina extends AppCompatActivity {
 
@@ -42,7 +43,7 @@ public class CreaOficina extends AppCompatActivity {
     private static final String MyPref = "MyPref";
     private String email, password, nom, cifEmp, direccio, poblacio, provincia, rol;
     private boolean okText = false;
-    public static Activity fa;
+    public static Activity fa; //La farem servir per tancar l'activitat
 
     /**
      * On create.
@@ -110,6 +111,15 @@ public class CreaOficina extends AppCompatActivity {
     }
 
 
+    /**
+     * No null text boolean.
+     *
+     * @param nom       the nom
+     * @param tipus     the tipus
+     * @param capacitat the capacitat
+     * @param preu      the preu
+     * @return the boolean
+     */
     public boolean NoNullText(String nom, String tipus, String capacitat, String preu) {
         if (nom.length() < 1 || tipus.length() < 1 || capacitat.length() < 1 || preu.length() < 1) {
             //Si algun camp es buit, marcara l'error a la pantalla

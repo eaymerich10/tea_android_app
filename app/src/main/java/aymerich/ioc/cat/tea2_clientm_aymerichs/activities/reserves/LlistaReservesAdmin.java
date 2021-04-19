@@ -21,7 +21,13 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Reserva;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.oficines.EliminarReservaApi;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.Parser;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.ResetURL;
 
+/**
+ *
+ * Classe encarregada de l'activity per llistar reserves del Administrador.
+ * Sense comentaris a linies, ja que funciona igual que el llistat de oficines
+ */
 public class LlistaReservesAdmin extends AppCompatActivity {
 
     ListView llistaReserves;
@@ -30,10 +36,16 @@ public class LlistaReservesAdmin extends AppCompatActivity {
     String codiAcces = "";
     String url = "";
     Parser parser;
+    ResetURL resetURL;
     ArrayList<String> reservesString = new ArrayList<String>();
     ArrayList<String> reservesFinal = new ArrayList<String>();
     ArrayList<String> idReserves = new ArrayList<String>();
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +53,8 @@ public class LlistaReservesAdmin extends AppCompatActivity {
         llistaReserves = (ListView) findViewById(R.id.lv_llista_reserves_user);
         Intent intent = getIntent();
         codiAcces = intent.getStringExtra("codiAcces");
-        url = "http://192.168.0.29:8080/";
+        resetURL = new ResetURL();
+        url = resetURL.resetUrl(url);
         reservesFinal = intent.getStringArrayListExtra("reservesFinal");
         idReserves = intent.getStringArrayListExtra("idReserves");
         reservesString = intent.getStringArrayListExtra("reservesString");
@@ -72,6 +85,13 @@ public class LlistaReservesAdmin extends AppCompatActivity {
         });
     }
 
+    /**
+     * On create context menu.
+     *
+     * @param menu     the menu
+     * @param v        the v
+     * @param menuInfo the menu info
+     */
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
