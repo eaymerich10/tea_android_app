@@ -4,6 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Reserva;
 
 public class Parser {
 
@@ -26,5 +27,20 @@ public class Parser {
             e.printStackTrace();
         }
         return oficina;
+    }
+
+    public Reserva parserStringToReserva(String reservaString){
+        Reserva reserva = new Reserva(null, null, null);
+        try {
+            JSONObject jsonOficina = new JSONObject(reservaString);
+            reserva.setIdReserva(jsonOficina.getString("idReserva"));
+            reserva.setDataIniciReserva(jsonOficina.getString("dataIniciReserva"));
+            reserva.setDataFinalReserva(jsonOficina.getString("dataFiReserva"));
+            reserva.setIdOficina(jsonOficina.getJSONObject("idOficina").getString("idOficina"));
+            reserva.setIdUsuari(jsonOficina.getJSONObject("idUsuari").getString("idUsuari"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return reserva;
     }
 }

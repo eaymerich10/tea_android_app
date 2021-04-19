@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aymerich.ioc.cat.tea2_clientm_aymerichs.activities.ReservesAdmin">
+    tools:context="aymerich.ioc.cat.tea2_clientm_aymerichs.activities.reserves.ReservesAdmin">
 
 
     <Button
@@ -15,24 +15,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="194dp"
         android:text="@string/llistar_reserves" />
-
-    <Button
-        android:id="@+id/b_editar_reserva_admin"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="249dp"
-        android:text="@string/editar_reserva" />
-
-    <Button
-        android:id="@+id/b_eliminar_reserva_admin"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/b_editar_reserva_admin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="@string/eliminar_reserva" />
 
 
     <TextView

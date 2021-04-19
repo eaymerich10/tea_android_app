@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.LlistaOficines">
+    tools:context=".activities.oficines.LlistaOficines">
 
     <ListView
         android:id="@+id/lv_llista_oficines"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="aymerich.ioc.cat.tea2_clientm_aymerichs.fragments.OficinaDetail"
+        android:name="aymerich.ioc.cat.tea2_clientm_aymerichs.fragments.OficinaDetailFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/lv_llista_oficines"

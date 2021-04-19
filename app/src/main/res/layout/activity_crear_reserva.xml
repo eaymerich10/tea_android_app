@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".network.reserves.BuscarOficines">
+
+    <TextView
+        android:id="@+id/tv_titol_crear_reserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:text="@string/fem_coworking" />
+
+    <TextView
+        android:id="@+id/tv_crear_reserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_titol_crear_reserva"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="163dp"
+        android:text="@string/crear_reserva" />
+
+    <TextView
+        android:id="@+id/tv_data_inici_reserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="175dp"
+        android:text="@string/data_inici" />
+
+    <TextView
+        android:id="@+id/tv_data_fi_reserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_data_inici_reserva"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/data_sortida" />
+
+    <Button
+        android:id="@+id/b_busca_oficines_disponibles"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="366dp"
+        android:text="@string/buscar_oficines" />
+
+    <EditText
+        android:id="@+id/et_data_inici_reserva"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_data_inici_reserva"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_data_fi_reserva"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_data_fi_reserva"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+</RelativeLayout>

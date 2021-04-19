@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context="aymerich.ioc.cat.tea2_clientm_aymerichs.activities.OficinesAdmin">
+        tools:context="aymerich.ioc.cat.tea2_clientm_aymerichs.activities.oficines.OficinesAdmin">
 
 
         <TextView

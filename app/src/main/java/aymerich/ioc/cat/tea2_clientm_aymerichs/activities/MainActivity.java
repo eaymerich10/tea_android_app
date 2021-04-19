@@ -16,7 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONException;
 
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
-import aymerich.ioc.cat.tea2_clientm_aymerichs.network.LoginApi;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.users.Registre;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.network.users.LoginApi;
 
 /**
  * MainActivity

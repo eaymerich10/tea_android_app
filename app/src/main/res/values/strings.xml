@@ -145,4 +145,13 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="id_reserva">ID Reserva</string>>
+    <string name="data_inici_reserva">Data inici Reserva</string>
+    <string name="data_final_reserva">Data Final Reserva</string>
+    <string name="id_oficina_reservada">ID oficina reservada</string>
+    <string name="id_usuari_reserva">ID usuari reserva</string>
+    <string name="crear_reserva">Crear Reserva</string>
+    <string name="data_inici">Data Inici</string>
+    <string name="data_sortida">Data Sortida</string>
+    <string name="buscar_oficines">Buscar Oficines</string>
 </resources>

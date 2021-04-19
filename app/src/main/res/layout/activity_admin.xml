@@ -103,7 +103,7 @@
         android:layout_marginTop="32dp" />
 
     <EditText
-        android:id="@+id/et_canvi_pass_user"
+        android:id="@+id/et_canvi_pass_admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -113,13 +113,24 @@
         android:inputType="textPassword"
         android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/bt_enviar_user"
+    <EditText
+        android:id="@+id/et_canvi_pass_confirmar_admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="259dp"
+        android:layout_marginTop="239dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bt_enviar_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_canvi_pass_admin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp"
         android:text="@string/enviar"
         android:visibility="invisible" />
 
@@ -127,9 +138,9 @@
         android:id="@+id/bt_cancelar_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/bt_enviar_user"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="323dp"
+        android:layout_marginTop="23dp"
         android:text="@string/cancelar"
         android:visibility="invisible" />
 

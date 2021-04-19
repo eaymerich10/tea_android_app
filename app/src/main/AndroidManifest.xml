@@ -13,8 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.EditarOficina"></activity>
-        <activity android:name=".activities.LlistaOficines" />
+        <activity android:name=".activities.oficines.LlistaOficinesDisponibles"></activity>
+        <activity android:name=".network.reserves.BuscarOficines" />
+        <activity android:name=".activities.reserves.LlistatReservesUser" />
+        <activity android:name=".activities.reserves.ReservesUser" />
+        <activity android:name=".activities.reserves.LlistaReservesAdmin" />
+        <activity android:name=".activities.oficines.EditarOficina" />
+        <activity android:name=".activities.oficines.LlistaOficines" />
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -40,7 +45,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.Admin"
+            android:name=".activities.users.Admin"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -50,7 +55,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.User"
+            android:name=".activities.users.User"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -60,7 +65,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.Registre"
+            android:name=".activities.users.Registre"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -70,7 +75,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.OficinesAdmin"
+            android:name=".activities.oficines.OficinesAdmin"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -80,7 +85,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.ReservesAdmin"
+            android:name=".activities.reserves.ReservesAdmin"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -90,7 +95,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.CreaOficina"
+            android:name=".activities.oficines.CreaOficina"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
