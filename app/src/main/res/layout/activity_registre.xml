@@ -13,6 +13,20 @@
 
 
         <TextView
+            android:id="@+id/tv_confirmar_password_registre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_password_registre"
+            android:layout_alignStart="@+id/et_email_registre"
+            android:layout_alignLeft="@+id/et_email_registre"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="monospace"
+            android:text="@string/confirmar_contrasenya"
+            android:textSize="12sp" />
+
+        <TextView
             android:id="@+id/tv_rol_registre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,12 +109,12 @@
             android:id="@+id/tv_nom_registre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/et_password_registre"
+            android:layout_below="@+id/et_confirmar_password_registre"
             android:layout_alignStart="@+id/tv_registre_registre"
             android:layout_alignLeft="@+id/tv_registre_registre"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="11dp"
             android:fontFamily="monospace"
             android:text="@string/tv_nom_registre"
             android:textSize="12sp" />
@@ -239,6 +253,21 @@
             android:inputType="textPassword"
             android:textSize="12sp" />
 
+
+        <EditText
+            android:id="@+id/et_confirmar_password_registre"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_confirmar_password_registre"
+            android:layout_alignStart="@+id/tv_password_registre"
+            android:layout_alignLeft="@+id/tv_password_registre"
+            android:layout_marginStart="-4dp"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginTop="2dp"
+            android:autofillHints=""
+            android:ems="17"
+            android:inputType="textPassword"
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/b_enviar_registre"

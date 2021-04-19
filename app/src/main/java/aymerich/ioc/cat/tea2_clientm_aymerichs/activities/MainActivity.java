@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tv_registre;
     Button btn_login;
     SharedPreferences sharedPreferences;
-    String url = "http://192.168.1.96:8080/";
+    String url = "http://192.168.0.29:8080/";
     public static final String Sp_Status = "Status";
     public static final String MyPref = "MyPref";
     public String username, password, codiAcces;

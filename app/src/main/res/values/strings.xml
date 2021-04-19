@@ -154,4 +154,9 @@
     <string name="data_inici">Data Inici</string>
     <string name="data_sortida">Data Sortida</string>
     <string name="buscar_oficines">Buscar Oficines</string>
+    <string name="confirmar_contrasenya">Confirmar contrasenya</string>
+    <string name="nom_de_l_oficina">Nom de l\'oficina</string>
+    <string name="tipus_d_oficina_reserva">Tipus d\'Oficina</string>
+    <string name="provincia_reserva">Provincia</string>
+    <string name="preu_reserva">Preu</string>
 </resources>

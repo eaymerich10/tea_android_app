@@ -23,13 +23,13 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.network.users.RegisterApi;
 public class Registre extends AppCompatActivity {
 
     //Definició de variables
-    EditText et_email, et_nom, et_password, et_cifEm, et_direccio, et_poblacio, et_provincia, et_rol;
+    EditText et_email, et_nom, et_password, et_confirmarPassword, et_cifEm, et_direccio, et_poblacio, et_provincia, et_rol;
     TextView tv_email, tv_nom, tv_password, tv_cifEm, tv_poblacio, tv_direccio, tv_provincia, tv_rol;
     Button bt_enviar, bt_tornar;
     String url = "";
     private static final String Sp_Status = "Status";
     private static final String MyPref = "MyPref";
-    private String email, password, nom, cifEmp, direccio, poblacio, provincia, rol;
+    private String email, password, confirmarPassword, nom, cifEmp, direccio, poblacio, provincia, rol;
     private boolean okText = false;
 
     /**
@@ -43,6 +43,7 @@ public class Registre extends AppCompatActivity {
         setContentView(R.layout.activity_registre);
         et_email = (EditText) findViewById(R.id.et_email_registre);
         et_password = (EditText) findViewById(R.id.et_password_registre);
+        et_confirmarPassword = (EditText) findViewById(R.id.et_confirmar_password_registre);
         et_nom = (EditText) findViewById(R.id.et_nom_registre);
         et_cifEm = (EditText) findViewById(R.id.et_cif_registre);
         et_direccio = (EditText) findViewById(R.id.et_direccio_registre);
@@ -72,7 +73,11 @@ public class Registre extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 email = et_email.getText().toString().trim();
-                password = et_password.getText().toString().trim();
+                if(et_password.getText().toString().trim().equals(et_confirmarPassword.getText().toString().trim())){
+                    password = et_password.getText().toString().trim();
+                } else{
+                    et_confirmarPassword.setError("La contrasenya no coincideix");
+                }
                 nom = et_nom.getText().toString().trim();
                 cifEmp = et_cifEm.getText().toString().trim();
                 direccio = et_direccio.getText().toString().trim();

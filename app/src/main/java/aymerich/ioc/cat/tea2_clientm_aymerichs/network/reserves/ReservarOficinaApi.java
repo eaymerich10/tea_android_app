@@ -80,7 +80,7 @@ public class ReservarOficinaApi {
                     Log.i("LOG_RESPONSE", codiAcces);
                     switch (codi) {
                         case 200:
-                            Toast.makeText(context, "Usuari registrat", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Oficina Reservada", Toast.LENGTH_SHORT).show();
                     }
                 }
             }, new Response.ErrorListener() {

@@ -36,7 +36,7 @@ public class User extends AppCompatActivity {
     Button bt_cancelar;
     TextView tv_nova_pass;
     TextView tv_inici;
-    EditText et_canvi;
+    EditText et_canvi, et_confirmarCanvi;
     SharedPreferences sharedPreferences;
     String codiAcces = "";
     String url = "";
@@ -61,7 +61,8 @@ public class User extends AppCompatActivity {
         bt_canvi = (Button) findViewById(R.id.boto_canvi_user);
         bt_enviar = (Button) findViewById(R.id.bt_enviar_user);
         bt_cancelar = (Button) findViewById(R.id.bt_cancelar_user);
-        et_canvi = (EditText) findViewById(R.id.et_canvi_pass_admin);
+        et_canvi = (EditText) findViewById(R.id.et_canvi_pass_user);
+        et_confirmarCanvi = (EditText) findViewById(R.id.et_canvi_pass_confirmar_user);
         tv_nova_pass = (TextView) findViewById(R.id.introduex_pass_tv_user);
         tv_inici = (TextView) findViewById(R.id.reserves_tv);
         Intent i = getIntent();
@@ -117,6 +118,7 @@ public class User extends AppCompatActivity {
                                         @Override
                                         public void onClick(View v) {
                                             et_canvi.setVisibility(View.VISIBLE);
+                                            et_confirmarCanvi.setVisibility(View.VISIBLE);
                                             bt_enviar.setVisibility(View.VISIBLE);
                                             bt_cancelar.setVisibility(View.VISIBLE);
                                             tv_nova_pass.setVisibility(View.VISIBLE);
@@ -132,11 +134,16 @@ public class User extends AppCompatActivity {
         bt_enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pass = et_canvi.getText().toString().trim();
+                if(et_canvi.getText().toString().trim().equals(et_confirmarCanvi.getText().toString().trim())){
+                    pass = et_canvi.getText().toString().trim();
+                }else {
+                    et_confirmarCanvi.setError("La contrasenya no coincideix");
+                }
                 if (pass.length() >= 1) {
                     CanviPassApi canviPass = new CanviPassApi(User.this, url, codiAcces, pass);
                     canviPass.Canvi();
                     et_canvi.setVisibility(View.INVISIBLE);
+                    et_confirmarCanvi.setVisibility(View.INVISIBLE);
                     bt_enviar.setVisibility(View.INVISIBLE);
                     bt_cancelar.setVisibility(View.INVISIBLE);
                     tv_nova_pass.setVisibility(View.INVISIBLE);

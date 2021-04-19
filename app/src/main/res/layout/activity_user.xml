@@ -126,7 +126,7 @@
         android:visibility="invisible" />
 
     <EditText
-        android:id="@+id/et_canvi_pass_user2"
+        android:id="@+id/et_canvi_pass_confirmar_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

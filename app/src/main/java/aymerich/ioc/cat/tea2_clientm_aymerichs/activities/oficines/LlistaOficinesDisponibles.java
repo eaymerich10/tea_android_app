@@ -45,7 +45,7 @@ public class LlistaOficinesDisponibles extends AppCompatActivity {
         llistaSales = (ListView) findViewById(R.id.lv_llista_oficines);
         Intent intent = getIntent();
         codiAcces = intent.getStringExtra("codiAcces");
-        url = "http://192.168.1.96:8080/";
+        url = "http://192.168.0.29:8080/";
         dataIniciReserva = intent.getStringExtra("dataIniciReserva");
         dataFiReserva = intent.getStringExtra("dataFiReserva");
         salesFinal = intent.getStringArrayListExtra("salesFinal");

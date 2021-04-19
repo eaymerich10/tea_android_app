@@ -41,7 +41,7 @@ public class LlistatReservesUser extends AppCompatActivity {
         llistaReserves = (ListView) findViewById(R.id.lv_llista_reserves_user);
         Intent intent = getIntent();
         codiAcces = intent.getStringExtra("codiAcces");
-        url = "http://192.168.1.96:8080/";
+        url = "http://192.168.0.29:8080/";
         reservesFinal = intent.getStringArrayListExtra("reservesFinal");
         idReserves = intent.getStringArrayListExtra("idReserves");
         reservesString = intent.getStringArrayListExtra("reservesString");
