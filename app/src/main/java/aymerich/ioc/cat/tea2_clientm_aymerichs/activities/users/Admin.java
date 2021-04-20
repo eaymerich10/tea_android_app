@@ -178,6 +178,7 @@ public class Admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 et_canvi.setVisibility(View.INVISIBLE);
+                et_confirmarCanvi.setVisibility(View.INVISIBLE);
                 bt_enviar.setVisibility(View.INVISIBLE);
                 bt_cancelar.setVisibility(View.INVISIBLE);
                 tv_nova_pass.setVisibility(View.INVISIBLE);

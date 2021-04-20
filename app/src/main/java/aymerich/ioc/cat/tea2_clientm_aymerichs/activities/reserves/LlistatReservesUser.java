@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Reserva;
-import aymerich.ioc.cat.tea2_clientm_aymerichs.network.oficines.EliminarReservaApi;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.network.reserves.EliminarReservaApi;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.Parser;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.ResetURL;
 

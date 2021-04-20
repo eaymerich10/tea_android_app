@@ -29,7 +29,11 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.oficines.OficinesAdmin
 import static androidx.core.content.ContextCompat.startActivity;
 
 public class EditarOficinaApi {
-
+    /**
+     *
+     * Classe per fer la request al servidor per editar oficines
+     *
+     */
     private String nom, tipus, capacitat, preu, serveis, direccio, poblacio, provincia;
     String url = "";
     private Oficina oficina = null;
@@ -41,6 +45,16 @@ public class EditarOficinaApi {
     private String idOficina = "";
 
 
+    /**
+     * Instantiates a new Editar oficina api.
+     *
+     * @param context   the context
+     * @param oficina   the oficina
+     * @param url       the url
+     * @param codiAcces the codi acces
+     * @param idOficina the id oficina
+     * @throws JSONException the json exception
+     */
     public EditarOficinaApi(Context context, Oficina oficina, String url, String codiAcces, String idOficina) throws JSONException {
         this.context = context;
         this.oficina = oficina;
@@ -50,8 +64,7 @@ public class EditarOficinaApi {
     }
 
     /**
-     * Register.
-     * Llença una request al servidor per crear un nou usuari i tracta la resposta
+     * Editar oficina.
      */
     public void EditarOficina() {
         nom = oficina.getNom();

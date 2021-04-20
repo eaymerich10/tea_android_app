@@ -26,10 +26,10 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Reserva;
 import static androidx.core.content.ContextCompat.startActivity;
 
 /**
- * LogoutApi class
- * Controla les funcions per tancar sessió
+ *
+ * Classe per fer la request al servidor per llistar les reserves
+ *
  */
-
 public class LlistarReservesApi {
 
     private String url;
@@ -43,11 +43,12 @@ public class LlistarReservesApi {
     ArrayList<String> idReserves = new ArrayList<String>();
 
     /**
-     * Instantiates a new Logout api.
+     * Instantiates a new Llistar reserves api.
      *
      * @param context   the context
      * @param url       the url
      * @param codiAcces the codi acces
+     * @param rol       the rol
      */
     public LlistarReservesApi(Context context, String url, String codiAcces, String rol) {
         this.context = context;
@@ -57,8 +58,7 @@ public class LlistarReservesApi {
     }
 
     /**
-     * Logout.
-     * Llença una request per tancar sessió i tracta la resposta
+     * Llistar.
      */
     public void llistar() {
         RequestQueue requestQueue = Volley.newRequestQueue(context);

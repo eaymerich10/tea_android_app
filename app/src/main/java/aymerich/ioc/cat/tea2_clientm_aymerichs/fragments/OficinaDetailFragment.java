@@ -14,6 +14,7 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
  * A simple {@link Fragment} subclass.
  * Use the {@link OficinaDetailFragment#newInstance} factory method to
  * create an instance of this fragment.
+ * Classe Fragment per gestionar els detalls de la oficina
  */
 public class OficinaDetailFragment extends Fragment {
 

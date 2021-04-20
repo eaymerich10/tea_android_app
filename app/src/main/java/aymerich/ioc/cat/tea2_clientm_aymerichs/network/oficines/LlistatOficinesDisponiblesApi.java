@@ -27,8 +27,9 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 import static androidx.core.content.ContextCompat.startActivity;
 
 /**
- * LogoutApi class
- * Controla les funcions per tancar sessió
+ *
+ * Classe per fer la request al servidor per llistar les oficines disponibles entre dos dates
+ *
  */
 public class LlistatOficinesDisponiblesApi {
 
@@ -45,11 +46,13 @@ public class LlistatOficinesDisponiblesApi {
     ArrayList<String> idSales = new ArrayList<String>();
 
     /**
-     * Instantiates a new Logout api.
+     * Instantiates a new Llistat oficines disponibles api.
      *
      * @param context   the context
      * @param url       the url
      * @param codiAcces the codi acces
+     * @param dataInici the data inici
+     * @param dataFi    the data fi
      */
     public LlistatOficinesDisponiblesApi(Context context, String url, String codiAcces, String dataInici, String dataFi) {
         this.context = context;
@@ -60,8 +63,7 @@ public class LlistatOficinesDisponiblesApi {
     }
 
     /**
-     * Logout.
-     * Llença una request per tancar sessió i tracta la resposta
+     * Llistat.
      */
     public void llistat() {
         try{

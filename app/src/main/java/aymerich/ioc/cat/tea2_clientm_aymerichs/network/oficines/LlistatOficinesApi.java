@@ -25,8 +25,9 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 import static androidx.core.content.ContextCompat.startActivity;
 
 /**
- * LogoutApi class
- * Controla les funcions per tancar sessió
+ *
+ * Classe per fer la request al servidor per llistar oficines
+ *
  */
 public class LlistatOficinesApi {
 
@@ -40,7 +41,7 @@ public class LlistatOficinesApi {
     ArrayList<String> idSales = new ArrayList<String>();
 
     /**
-     * Instantiates a new Logout api.
+     * Instantiates a new Llistat oficines api.
      *
      * @param context   the context
      * @param url       the url
@@ -53,8 +54,7 @@ public class LlistatOficinesApi {
     }
 
     /**
-     * Logout.
-     * Llença una request per tancar sessió i tracta la resposta
+     * Llistat.
      */
     public void llistat() {
         RequestQueue requestQueue = Volley.newRequestQueue(context);

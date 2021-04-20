@@ -13,6 +13,7 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
  * A simple {@link Fragment} subclass.
  * Use the {@link ReservaDetailFragment#newInstance} factory method to
  * create an instance of this fragment.
+ * Classe que gestiona el detall de les reserves
  */
 public class ReservaDetailFragment extends Fragment {
 

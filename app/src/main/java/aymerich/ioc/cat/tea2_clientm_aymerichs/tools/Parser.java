@@ -6,8 +6,19 @@ import org.json.JSONObject;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Reserva;
 
+/**
+ *
+ * Classe per crear oficines o reserves a partir de una string amb format JSON
+ *
+ */
 public class Parser {
 
+    /**
+     * Parser string to oficina oficina.
+     *
+     * @param oficinaString the oficina string
+     * @return the oficina
+     */
     public Oficina parserStringToOficina(String oficinaString){
         Oficina oficina = new Oficina(null, null, null, null);
         try {
@@ -29,6 +40,12 @@ public class Parser {
         return oficina;
     }
 
+    /**
+     * Parser string to reserva reserva.
+     *
+     * @param reservaString the reserva string
+     * @return the reserva
+     */
     public Reserva parserStringToReserva(String reservaString){
         Reserva reserva = new Reserva(null, null, null);
         try {

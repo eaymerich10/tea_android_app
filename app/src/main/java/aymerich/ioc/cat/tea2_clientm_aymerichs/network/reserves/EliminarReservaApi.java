@@ -1,4 +1,4 @@
-package aymerich.ioc.cat.tea2_clientm_aymerichs.network.oficines;
+package aymerich.ioc.cat.tea2_clientm_aymerichs.network.reserves;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -11,8 +11,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 /**
- * LogoutApi class
- * Controla les funcions per tancar sessió
+ *
+ * Classe per fer la request al servidor per eliminar una reserva
+ *
  */
 public class EliminarReservaApi {
 
@@ -22,11 +23,12 @@ public class EliminarReservaApi {
     private Context context;
 
     /**
-     * Instantiates a new Logout api.
+     * Instantiates a new Eliminar reserva api.
      *
      * @param context   the context
      * @param url       the url
      * @param codiAcces the codi acces
+     * @param idReserva the id reserva
      */
     public EliminarReservaApi(Context context, String url, String codiAcces, String idReserva) {
         this.context = context;
@@ -36,8 +38,7 @@ public class EliminarReservaApi {
     }
 
     /**
-     * Logout.
-     * Llença una request per tancar sessió i tracta la resposta
+     * Eliminar.
      */
     public void Eliminar() {
 

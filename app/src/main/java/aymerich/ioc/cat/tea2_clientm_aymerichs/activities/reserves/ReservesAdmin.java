@@ -10,6 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.reserves.LlistarReservesApi;
 
+/**
+ *
+ * Classe per l'activity que gestiona les reserves per l'administrador
+ *
+ */
 public class ReservesAdmin extends AppCompatActivity {
 
     Button llistarReserves, eliminarReserva;
@@ -17,6 +22,12 @@ public class ReservesAdmin extends AppCompatActivity {
     private String url = "";
     private String rol = "";
     LlistarReservesApi llistarReservesApi;
+
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

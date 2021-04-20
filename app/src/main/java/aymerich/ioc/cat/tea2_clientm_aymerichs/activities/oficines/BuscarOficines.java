@@ -1,4 +1,4 @@
-package aymerich.ioc.cat.tea2_clientm_aymerichs.network.reserves;
+package aymerich.ioc.cat.tea2_clientm_aymerichs.activities.oficines;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -18,6 +18,10 @@ import java.util.Locale;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.oficines.LlistatOficinesDisponiblesApi;
 
+/**
+ *
+ * Classe que gestiona l'activity per buscar oficines
+ */
 public class BuscarOficines extends AppCompatActivity {
 
     final Calendar myCalendar = Calendar.getInstance();
@@ -30,6 +34,11 @@ public class BuscarOficines extends AppCompatActivity {
     EditText et_data_inici_reserva, et_data_fi_reserva;
     Button bt_buscar_oficines;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

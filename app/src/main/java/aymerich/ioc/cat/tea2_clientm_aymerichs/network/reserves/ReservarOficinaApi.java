@@ -25,8 +25,9 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 
 /**
- * RegisterApi class
- * Tracta les funcions per crear un nou usuari al servidor
+ *
+ * Classe per fer la request al servidor per reservar una oficina
+ *
  */
 public class ReservarOficinaApi {
     private String idOficina, dataIniciReserva, dataFiReserva;
@@ -38,10 +39,14 @@ public class ReservarOficinaApi {
     private String codiAcces = "";
 
     /**
-     * Instantiates a new Register api.
+     * Instantiates a new Reservar oficina api.
      *
-     * @param context   the context
-     * @param url       the url
+     * @param context          the context
+     * @param idOficina        the id oficina
+     * @param dataIniciReserva the data inici reserva
+     * @param dataFiReserva    the data fi reserva
+     * @param codiAcces        the codi acces
+     * @param url              the url
      * @throws JSONException the json exception
      */
     public ReservarOficinaApi(Context context, String idOficina, String dataIniciReserva, String dataFiReserva, String codiAcces , String url) throws JSONException {
@@ -55,8 +60,7 @@ public class ReservarOficinaApi {
     }
 
     /**
-     * Register.
-     * Llença una request al servidor per crear un nou usuari i tracta la resposta
+     * Reservar.
      */
     public void Reservar() {
         try {

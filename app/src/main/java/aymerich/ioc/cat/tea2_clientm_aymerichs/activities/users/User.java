@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.MainActivity;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.reserves.ReservesUser;
-import aymerich.ioc.cat.tea2_clientm_aymerichs.network.reserves.BuscarOficines;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.oficines.BuscarOficines;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.users.CanviPassApi;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.users.LogoutApi;
 
@@ -164,6 +164,7 @@ public class User extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 et_canvi.setVisibility(View.INVISIBLE);
+                et_confirmarCanvi.setVisibility(View.INVISIBLE);
                 bt_enviar.setVisibility(View.INVISIBLE);
                 bt_cancelar.setVisibility(View.INVISIBLE);
                 tv_nova_pass.setVisibility(View.INVISIBLE);

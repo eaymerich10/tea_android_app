@@ -11,8 +11,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 /**
- * LogoutApi class
- * Controla les funcions per tancar sessió
+ *
+ * Classe per fer la request al servidor per eliminar una oficina
+ *
  */
 public class EliminarOficinaApi {
 
@@ -22,11 +23,12 @@ public class EliminarOficinaApi {
     private Context context;
 
     /**
-     * Instantiates a new Logout api.
+     * Instantiates a new Eliminar oficina api.
      *
      * @param context   the context
      * @param url       the url
      * @param codiAcces the codi acces
+     * @param idOficina the id oficina
      */
     public EliminarOficinaApi(Context context, String url, String codiAcces, String idOficina) {
         this.context = context;
@@ -36,8 +38,7 @@ public class EliminarOficinaApi {
     }
 
     /**
-     * Logout.
-     * Llença una request per tancar sessió i tracta la resposta
+     * Eliminar.
      */
     public void Eliminar() {
 

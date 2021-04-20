@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AppCompat"
         android:usesCleartextTraffic="true">
         <activity android:name=".activities.oficines.LlistaOficinesDisponibles"></activity>
-        <activity android:name=".network.reserves.BuscarOficines" />
+        <activity android:name=".activities.oficines.BuscarOficines" />
         <activity android:name=".activities.reserves.LlistatReservesUser" />
         <activity android:name=".activities.reserves.ReservesUser" />
         <activity android:name=".activities.reserves.LlistaReservesAdmin" />

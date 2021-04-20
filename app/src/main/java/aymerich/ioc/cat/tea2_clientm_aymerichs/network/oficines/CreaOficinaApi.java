@@ -27,6 +27,11 @@ import java.io.UnsupportedEncodingException;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.oficines.CreaOficina;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 
+/**
+ *
+ * Classe per fer la request al servidor per crear oficines
+ *
+ */
 public class CreaOficinaApi {
 
     private String nom, tipus, capacitat, preu, serveis, direccio, poblacio, provincia;
@@ -41,6 +46,15 @@ public class CreaOficinaApi {
     private String codiOficina = "";
 
 
+    /**
+     * Instantiates a new Crea oficina api.
+     *
+     * @param context   the context
+     * @param oficina   the oficina
+     * @param url       the url
+     * @param codiAcces the codi acces
+     * @throws JSONException the json exception
+     */
     public CreaOficinaApi(Context context, Oficina oficina, String url, String codiAcces) throws JSONException {
         this.context = context;
         this.oficina = oficina;
@@ -49,8 +63,7 @@ public class CreaOficinaApi {
     }
 
     /**
-     * Register.
-     * Llença una request al servidor per crear un nou usuari i tracta la resposta
+     * Crearoficina.
      */
     public void Crearoficina() {
         nom = oficina.getNom();

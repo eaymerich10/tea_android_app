@@ -21,6 +21,11 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 
+/**
+ *
+ * Classe per fer la request al servidor per editar una oficina
+ *
+ */
 public class HabilitarOficinaApi {
 
     String url = "";
@@ -32,6 +37,16 @@ public class HabilitarOficinaApi {
     private String idOficina = "";
     private String habilitada = "";
 
+    /**
+     * Instantiates a new Habilitar oficina api.
+     *
+     * @param context    the context
+     * @param url        the url
+     * @param codiAcces  the codi acces
+     * @param idOficina  the id oficina
+     * @param habilitada the habilitada
+     * @throws JSONException the json exception
+     */
     public HabilitarOficinaApi(Context context,  String url, String codiAcces, String idOficina, String habilitada) throws JSONException {
         this.context = context;
         this.url = url;
@@ -41,8 +56,7 @@ public class HabilitarOficinaApi {
     }
 
     /**
-     * Register.
-     * Llença una request al servidor per crear un nou usuari i tracta la resposta
+     * Habilitar oficina.
      */
     public void HabilitarOficina() {
 
