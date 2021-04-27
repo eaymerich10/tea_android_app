@@ -26,9 +26,7 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Reserva;
 import static androidx.core.content.ContextCompat.startActivity;
 
 /**
- *
  * Classe per fer la request al servidor per llistar les reserves
- *
  */
 public class LlistarReservesApi {
 
@@ -79,9 +77,9 @@ public class LlistarReservesApi {
                                 reserva.setIdUsuari(jresponse.getJSONObject("idUsuari").getString("idUsuari"));
                                 reservesString.add(jresponse.toString());
                                 idReserves.add(reserva.getIdReserva());
-                                reservesFinal.add("ID reserva " + reserva.getIdReserva() +  " ID Oficina " + reserva.getIdOficina() + " ID Usuari " + reserva.getIdUsuari());
+                                reservesFinal.add("ID reserva " + reserva.getIdReserva() + " ID Oficina " + reserva.getIdOficina() + " ID Usuari " + reserva.getIdUsuari());
                             }
-                            if(rol.equals("ADMINISTRADOR")) {
+                            if (rol.equals("ADMINISTRADOR")) {
                                 Intent intent = new Intent(context, LlistaReservesAdmin.class);
                                 intent.putExtra("url", url);
                                 intent.putExtra("codiAcces", codiAcces);
@@ -89,7 +87,7 @@ public class LlistarReservesApi {
                                 intent.putStringArrayListExtra("idReserves", idReserves);
                                 intent.putStringArrayListExtra("reservesString", reservesString);
                                 startActivity(context, intent, bundle);
-                            } else{
+                            } else {
                                 Intent intent = new Intent(context, LlistatReservesUser.class);
                                 intent.putExtra("url", url);
                                 intent.putExtra("codiAcces", codiAcces);

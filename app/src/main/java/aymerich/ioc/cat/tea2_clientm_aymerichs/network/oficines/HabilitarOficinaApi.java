@@ -60,7 +60,6 @@ public class HabilitarOficinaApi {
      */
     public void HabilitarOficina() {
 
-
         RequestQueue queue = Volley.newRequestQueue(context);
         JSONObject oficina = new JSONObject();
         try {
