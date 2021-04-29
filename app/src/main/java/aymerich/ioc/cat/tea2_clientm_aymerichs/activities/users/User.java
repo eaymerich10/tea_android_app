@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,11 +32,11 @@ public class User extends AppCompatActivity {
     Button bt_factures;
     Button bt_sortir;
     Button bt_logout;
-    Button bt_canvi;
     Button bt_enviar;
     Button bt_cancelar;
     TextView tv_nova_pass;
     TextView tv_inici;
+    ImageView iv_canviarPass;
     EditText et_canvi, et_confirmarCanvi;
     SharedPreferences sharedPreferences;
     String codiAcces = "";
@@ -58,7 +59,7 @@ public class User extends AppCompatActivity {
         bt_factures = (Button) findViewById(R.id.b_veure_factures);
         bt_sortir = (Button) findViewById(R.id.b_sortida_user);
         bt_logout = (Button) findViewById(R.id.b_logout_user);
-        bt_canvi = (Button) findViewById(R.id.boto_canvi_user);
+        iv_canviarPass = (ImageView) findViewById(R.id.iv_canviar_contrasenya_user);
         bt_enviar = (Button) findViewById(R.id.bt_enviar_user);
         bt_cancelar = (Button) findViewById(R.id.bt_cancelar_user);
         et_canvi = (EditText) findViewById(R.id.et_canvi_pass_user);
@@ -113,7 +114,7 @@ public class User extends AppCompatActivity {
                 finish();
             }
         });
-        bt_canvi.setOnClickListener(new View.OnClickListener() {
+        iv_canviarPass.setOnClickListener(new View.OnClickListener() {
 
                                         @Override
                                         public void onClick(View v) {

@@ -11,8 +11,8 @@ public class Reserva {
     /**
      * Instantiates a new Reserva.
      *
-     * @param dataIniciReserva the data inici reserva
-     * @param dataFinalReserva the data final reserva
+     * @param dataIniciReserva the data inici FacturaDetailFragment
+     * @param dataFinalReserva the data final FacturaDetailFragment
      * @param idOficina        the id oficina
      * Classe model que gestiona les reserves
      */
@@ -24,54 +24,54 @@ public class Reserva {
     }
 
     /**
-     * Gets id reserva.
+     * Gets id FacturaDetailFragment.
      *
-     * @return the id reserva
+     * @return the id FacturaDetailFragment
      */
     public String getIdReserva() {
         return idReserva;
     }
 
     /**
-     * Sets id reserva.
+     * Sets id FacturaDetailFragment.
      *
-     * @param idReserva the id reserva
+     * @param idReserva the id FacturaDetailFragment
      */
     public void setIdReserva(String idReserva) {
         this.idReserva = idReserva;
     }
 
     /**
-     * Gets data inici reserva.
+     * Gets data inici FacturaDetailFragment.
      *
-     * @return the data inici reserva
+     * @return the data inici FacturaDetailFragment
      */
     public String getDataIniciReserva() {
         return dataIniciReserva;
     }
 
     /**
-     * Sets data inici reserva.
+     * Sets data inici FacturaDetailFragment.
      *
-     * @param dataIniciReserva the data inici reserva
+     * @param dataIniciReserva the data inici FacturaDetailFragment
      */
     public void setDataIniciReserva(String dataIniciReserva) {
         this.dataIniciReserva = dataIniciReserva;
     }
 
     /**
-     * Gets data final reserva.
+     * Gets data final FacturaDetailFragment.
      *
-     * @return the data final reserva
+     * @return the data final FacturaDetailFragment
      */
     public String getDataFinalReserva() {
         return dataFinalReserva;
     }
 
     /**
-     * Sets data final reserva.
+     * Sets data final FacturaDetailFragment.
      *
-     * @param dataFinalReserva the data final reserva
+     * @param dataFinalReserva the data final FacturaDetailFragment
      */
     public void setDataFinalReserva(String dataFinalReserva) {
         this.dataFinalReserva = dataFinalReserva;

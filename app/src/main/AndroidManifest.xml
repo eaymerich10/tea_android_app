@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.oficines.LlistaOficinesDisponibles"></activity>
+        <activity android:name=".activities.factures.LlistatFactures"></activity>
+        <activity android:name=".activities.factures.FacturacioAdmin" />
+        <activity android:name=".activities.oficines.LlistaOficinesDisponibles" />
         <activity android:name=".activities.oficines.BuscarOficines" />
         <activity android:name=".activities.reserves.LlistatReservesUser" />
         <activity android:name=".activities.reserves.ReservesUser" />

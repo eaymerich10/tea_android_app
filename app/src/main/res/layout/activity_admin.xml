@@ -67,18 +67,6 @@
         android:text="@string/inici"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/boto_canvi_user"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:text="@string/canviar_contrasenya" />
-
     <TextView
         android:id="@+id/tv_titol_user"
         android:layout_width="wrap_content"
@@ -156,4 +144,16 @@
         android:layout_marginTop="140dp"
         android:text="@string/introdueix_la_nova_contrasenya"
         android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_canviar_contrasenya_admin"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="21dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/unnamed" />
+
 </RelativeLayout>

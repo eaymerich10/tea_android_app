@@ -12,7 +12,7 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.network.reserves.LlistarReservesA
 
 /**
  *
- * Classe encarregada de l'activity per gestionar les reserva de les oficines
+ * Classe encarregada de l'activity per gestionar les FacturaDetailFragment de les oficines
  * Sense comentaris a linies, ja que funciona igual que le gestió de oficines
  *
  */

@@ -49,8 +49,6 @@
     <string name="crear_una_nova_oficina">Crear una nova Oficina</string>
     <string name="nom_de_la_oficina">Nom de la Oficina</string>
     <string name="tipus_d_oficina">Tipus d\'Oficina</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="eliminada">Eliminada</string>
     <string name="habiltada">Habiltada</string>
     <string name="idoficina">idOficina</string>
@@ -68,4 +66,10 @@
     <string name="confirmar_contrasenya">Confirmar contrasenya</string>
     <string name="provincia_reserva">Provincia</string>
     <string name="preu_reserva">Preu</string>
+    <string name="llistar_factures">Llistar Factures</string>
+    <string name="gesti_de_la_facturacio">Gestió de la Facturació</string>
+    <string name="base">Base</string>
+    <string name="total_impostos">Total Impostos</string>
+    <string name="impost_iva">Impost IVA</string>
+    <string name="factura">Factura</string>
 </resources>

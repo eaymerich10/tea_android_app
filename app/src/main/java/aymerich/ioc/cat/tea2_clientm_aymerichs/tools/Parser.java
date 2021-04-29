@@ -41,10 +41,10 @@ public class Parser {
     }
 
     /**
-     * Parser string to reserva reserva.
+     * Parser string to FacturaDetailFragment FacturaDetailFragment.
      *
-     * @param reservaString the reserva string
-     * @return the reserva
+     * @param reservaString the FacturaDetailFragment string
+     * @return the FacturaDetailFragment
      */
     public Reserva parserStringToReserva(String reservaString){
         Reserva reserva = new Reserva(null, null, null);

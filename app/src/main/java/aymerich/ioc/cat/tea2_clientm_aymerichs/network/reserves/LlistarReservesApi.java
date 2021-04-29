@@ -77,7 +77,7 @@ public class LlistarReservesApi {
                                 reserva.setIdUsuari(jresponse.getJSONObject("idUsuari").getString("idUsuari"));
                                 reservesString.add(jresponse.toString());
                                 idReserves.add(reserva.getIdReserva());
-                                reservesFinal.add("ID reserva " + reserva.getIdReserva() + " ID Oficina " + reserva.getIdOficina() + " ID Usuari " + reserva.getIdUsuari());
+                                reservesFinal.add("ID FacturaDetailFragment " + reserva.getIdReserva() + " ID Oficina " + reserva.getIdOficina() + " ID Usuari " + reserva.getIdUsuari());
                             }
                             if (rol.equals("ADMINISTRADOR")) {
                                 Intent intent = new Intent(context, LlistaReservesAdmin.class);

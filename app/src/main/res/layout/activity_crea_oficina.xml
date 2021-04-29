@@ -89,6 +89,7 @@
             android:layout_marginLeft="1dp"
             android:layout_marginTop="2dp"
             android:autofillHints=""
+            android:clickable="false"
             android:ems="17" />
 
         <TextView

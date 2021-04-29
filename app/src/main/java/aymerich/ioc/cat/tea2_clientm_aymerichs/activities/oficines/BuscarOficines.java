@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,8 +31,8 @@ public class BuscarOficines extends AppCompatActivity {
     private String dataIniciReserva = "";
     private String dataFiReserva = "";
     private String dataEt = "";
-    TextView tv_data_inici_reserva, tv_data_fi_reserva;
-    EditText et_data_inici_reserva, et_data_fi_reserva;
+    TextView tv_data_inici_reserva, tv_data_fi_reserva, tv_data_inici_reserva_value, tv_data_fi_reserva_value;
+    ImageView iv_data_inici_reserva, iv_data_fi_reserva;
     Button bt_buscar_oficines;
 
     /**
@@ -46,8 +46,10 @@ public class BuscarOficines extends AppCompatActivity {
         setContentView(R.layout.activity_crear_reserva);
         tv_data_inici_reserva = (TextView) findViewById(R.id.tv_data_inici_reserva);
         tv_data_fi_reserva = (TextView) findViewById(R.id.tv_data_fi_reserva);
-        et_data_inici_reserva = (EditText) findViewById(R.id.et_data_inici_reserva);
-        et_data_fi_reserva = (EditText) findViewById(R.id.et_data_fi_reserva);
+        tv_data_inici_reserva_value = (TextView) findViewById(R.id.tv_data_inici_reserva_value);
+        tv_data_fi_reserva_value = (TextView) findViewById(R.id.tv_data_final_reserva_value);
+        iv_data_inici_reserva = (ImageView) findViewById(R.id.iv_data_inici_reserva);
+        iv_data_fi_reserva = (ImageView) findViewById(R.id.iv_data_fi_reserva);
         bt_buscar_oficines = (Button) findViewById(R.id.b_busca_oficines_disponibles);
         Intent intent = getIntent();
         url = intent.getStringExtra("url");
@@ -64,7 +66,7 @@ public class BuscarOficines extends AppCompatActivity {
                 updateLabel(dataEt);
             }
         };
-        et_data_inici_reserva.setOnClickListener(new View.OnClickListener() {
+        iv_data_inici_reserva.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -75,7 +77,7 @@ public class BuscarOficines extends AppCompatActivity {
                 dataEt = "INICI";
             }
         });
-        et_data_fi_reserva.setOnClickListener(new View.OnClickListener() {
+        iv_data_fi_reserva.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -104,13 +106,13 @@ public class BuscarOficines extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.FRANCE);
 
         if (dataEt.equals("INICI")) {
-            et_data_inici_reserva.setText(sdf.format(myCalendar.getTime()));
-            dataIniciReserva = et_data_inici_reserva.getText().toString();
+            dataIniciReserva = sdf.format(myCalendar.getTime());
+            tv_data_inici_reserva_value.setText(dataIniciReserva.trim());
         }
 
         if (dataEt.equals("FI")) {
-            et_data_fi_reserva.setText(sdf.format(myCalendar.getTime()));
-            dataFiReserva = et_data_fi_reserva.getText().toString();
+            dataFiReserva = sdf.format(myCalendar.getTime());
+            tv_data_fi_reserva_value.setText(dataFiReserva.trim());
         }
     }
 
@@ -118,12 +120,11 @@ public class BuscarOficines extends AppCompatActivity {
         if (dataIniciReserva.length() < 1 || dataFiReserva.length() < 1) {
             //Si algun camp es buit, marcara l'error a la pantalla
             if (dataIniciReserva.length() < 1) {
-                et_data_inici_reserva.setError("Introdueix una data");
+                Toast.makeText(BuscarOficines.this, "Introdueix una data de entrada", Toast.LENGTH_SHORT).show();
             }
             if (dataFiReserva.length() < 1) {
-                et_data_fi_reserva.setError("Introdueix una data");
+                Toast.makeText(BuscarOficines.this, "Introdueix una data de sortida", Toast.LENGTH_SHORT).show();
             }
-            Toast.makeText(BuscarOficines.this, "Algun camp no és correcte", Toast.LENGTH_SHORT).show();
             return false;
         } else {
             return true;

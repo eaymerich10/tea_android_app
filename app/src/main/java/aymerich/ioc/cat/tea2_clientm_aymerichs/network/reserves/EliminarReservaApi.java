@@ -12,7 +12,7 @@ import com.android.volley.toolbox.Volley;
 
 /**
  *
- * Classe per fer la request al servidor per eliminar una reserva
+ * Classe per fer la request al servidor per eliminar una FacturaDetailFragment
  *
  */
 public class EliminarReservaApi {
@@ -23,12 +23,12 @@ public class EliminarReservaApi {
     private Context context;
 
     /**
-     * Instantiates a new Eliminar reserva api.
+     * Instantiates a new Eliminar FacturaDetailFragment api.
      *
      * @param context   the context
      * @param url       the url
      * @param codiAcces the codi acces
-     * @param idReserva the id reserva
+     * @param idReserva the id FacturaDetailFragment
      */
     public EliminarReservaApi(Context context, String url, String codiAcces, String idReserva) {
         this.context = context;

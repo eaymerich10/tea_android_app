@@ -127,7 +127,7 @@ public class CreaOficinaApi {
                         //handle if server error occurs with 5** status code
                         codiError = error.networkResponse.statusCode;
                         if (codiError == 400) {
-                            Toast.makeText(context, "L'usuari ja existeix!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "La oficina ja existeix!", Toast.LENGTH_SHORT).show();
                         }
 
                     } else if (error instanceof TimeoutError) {

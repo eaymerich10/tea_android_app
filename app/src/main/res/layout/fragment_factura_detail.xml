@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEBEB"
+    tools:context=".fragments.FacturaDetailFragment">
+
+    <TextView
+        android:id="@+id/tv_subtotal_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_poblacio_oficina_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="100dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_total_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_impost_final_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_impost_final_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_subtotal_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_base_res_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_impostos_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="235dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_impost_base_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_data_final_reserva_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/base"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_total_impostos_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_data_final_reserva_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="140dp"
+        android:text="@string/total_impostos"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_total_impostos_res_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_impostos_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="160dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_iva_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_impostos_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_impostos_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_data_final_reserva_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="295dp"
+        android:text="@string/impost_iva"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_data_final_reserva_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_data_inici_reserva_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_data_inici_reserva_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_serveis_oficina_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_serveis_oficina_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_preu_oficina_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_preu_oficina_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tipus_oficina_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_tipus_oficina_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nom_oficina_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_nom_oficina_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nom_usuari_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_num_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_factura_titol"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_num_reserva_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_data_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_nom_usuari_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_num_reserva_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_data_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_num_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="305dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_poblacio_oficina_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_provincia_oficina_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="120dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_provincia_oficina_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_direccio_oficina_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="120dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+    <TextView
+        android:id="@+id/tv_factura_titol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/factura"
+        android:textColor="#131313"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_nom_corp_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/fem_coworking"
+        android:textColor="#131313"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_direccio_oficina_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nom_corp_factura"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="120dp"
+        android:text="TextView"
+        android:textColor="#131313" />
+
+</RelativeLayout>

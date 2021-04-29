@@ -89,7 +89,6 @@ public class EditarOficina extends AppCompatActivity {
         Oficina ofi = new Oficina(null,null,null,null);
         ofi = parser.parserStringToOficina(oficinaString);
         omplirCamps(ofi);
-
         adapter=new ArrayAdapter(this, R.layout.text_view_list,tipus_oficines);
         lv1=findViewById(R.id.lv_tipus_oficina_editar);
         lv1.setAdapter(adapter);
@@ -98,6 +97,7 @@ public class EditarOficina extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 tipus = lv1.getItemAtPosition(position).toString();
                 view.setSelected(true);
+                calculaPreu(tipus);
             }
         });
         bt_enviar.setOnClickListener(new View.OnClickListener() {
@@ -169,6 +169,18 @@ public class EditarOficina extends AppCompatActivity {
         et_poblacio.setText(oficina.getPoblacio());
         et_provincia.setText(oficina.getProvincia());
         et_serveis.setText(oficina.getServeis());
+    }
+
+    public void calculaPreu(String tipus){
+        if(tipus.equals("OFICINA_PRIVADA")){
+            et_preu.setText("29.95");
+        }
+        else if (tipus.equals("SUITE_OFICINES")){
+            et_preu.setText("54.95");
+        }
+        else if (tipus.equals("ESCRIPTORI_DEDICAT")){
+            et_preu.setText("19.95");
+        }
     }
 }
 

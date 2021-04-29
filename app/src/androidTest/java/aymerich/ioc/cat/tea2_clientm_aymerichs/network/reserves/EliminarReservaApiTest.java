@@ -65,6 +65,6 @@ public class EliminarReservaApiTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        assertEquals("Tot Correcte", "reserva donada de baixa", testResponse);
+        assertEquals("Tot Correcte", "FacturaDetailFragment donada de baixa", testResponse);
     }
 }

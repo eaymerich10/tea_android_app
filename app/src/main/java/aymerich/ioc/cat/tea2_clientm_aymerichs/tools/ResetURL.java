@@ -14,7 +14,7 @@ public class ResetURL {
      * @return the string
      */
     public String resetUrl(String url){
-        url = "http://192.168.1.92:8080/";
+        url = "http://192.168.1.17:8080/";
         return url;
     }
 }

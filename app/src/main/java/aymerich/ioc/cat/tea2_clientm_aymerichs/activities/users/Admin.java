@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.MainActivity;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.factures.FacturacioAdmin;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.oficines.OficinesAdmin;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.reserves.ReservesAdmin;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.users.LogoutApi;
@@ -31,11 +33,11 @@ public class Admin extends AppCompatActivity {
     Button bt_facturacio;
     Button bt_sortir;
     Button bt_logout;
-    Button bt_canvi;
     Button bt_enviar;
     Button bt_cancelar;
     TextView tv_nova_pass;
     TextView tv_inici;
+    ImageView iv_canviarPass;
     EditText et_canvi, et_confirmarCanvi;
     SharedPreferences sharedPreferences;
     String codiAcces = "";
@@ -55,9 +57,9 @@ public class Admin extends AppCompatActivity {
         bt_facturacio = (Button) findViewById(R.id.b_facturacio_admin);
         bt_sortir = (Button) findViewById(R.id.b_sortir_admin);
         bt_logout = (Button) findViewById(R.id.b_logout_admin);
-        bt_canvi = (Button) findViewById(R.id.boto_canvi_user);
         bt_enviar = (Button) findViewById(R.id.bt_enviar_user);
         bt_cancelar = (Button) findViewById(R.id.bt_cancelar_user);
+        iv_canviarPass = (ImageView) findViewById(R.id.iv_canviar_contrasenya_admin);
         et_canvi = (EditText) findViewById(R.id.et_canvi_pass_admin);
         et_confirmarCanvi = (EditText) findViewById(R.id.et_canvi_pass_confirmar_admin);
         tv_nova_pass = (TextView) findViewById(R.id.introduex_pass_tv_user);
@@ -96,6 +98,18 @@ public class Admin extends AppCompatActivity {
             }
         });
 
+        bt_facturacio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Admin.this, FacturacioAdmin.class);
+                intent.putExtra("codiAcces", codiAcces);
+                intent.putExtra("url", url);
+                intent.putExtra("rol", rol);
+                Admin.this.startActivity(intent);
+
+            }
+        });
+
         bt_logout.setOnClickListener(new View.OnClickListener() {
 
             /**
@@ -115,7 +129,7 @@ public class Admin extends AppCompatActivity {
                 finish();
             }
         });
-        bt_canvi.setOnClickListener(new View.OnClickListener() {
+        iv_canviarPass.setOnClickListener(new View.OnClickListener() {
 
                                         /**
                                          * OnClick (canviPass)

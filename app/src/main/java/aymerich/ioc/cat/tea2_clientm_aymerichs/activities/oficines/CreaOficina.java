@@ -57,6 +57,7 @@ public class CreaOficina extends AppCompatActivity {
         et_nom = (EditText) findViewById(R.id.et_nom_oficina);
         et_capacitat = (EditText) findViewById(R.id.et_capacitat_oficina);
         et_preu = (EditText) findViewById(R.id.et_preu_oficina);
+        et_preu.setEnabled(false);
         et_direccio = (EditText) findViewById(R.id.et_direccio_oficina);
         et_poblacio = (EditText) findViewById(R.id.et_poblacio_oficina);
         et_provincia = (EditText) findViewById(R.id.et_provincia_oficina);
@@ -85,6 +86,7 @@ public class CreaOficina extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 tipus = lv1.getItemAtPosition(position).toString();
+                calculaPreu(tipus);
                 view.setSelected(true);
             }
         });
@@ -139,6 +141,18 @@ public class CreaOficina extends AppCompatActivity {
             return false;
         } else {
             return true;
+        }
+    }
+
+    public void calculaPreu(String tipus){
+        if(tipus.equals("OFICINA_PRIVADA")){
+            et_preu.setText("29.95");
+        }
+        else if (tipus.equals("SUITE_OFICINES")){
+            et_preu.setText("54.95");
+        }
+        else if (tipus.equals("ESCRIPTORI_DEDICAT")){
+            et_preu.setText("19.95");
         }
     }
 }

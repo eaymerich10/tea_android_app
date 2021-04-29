@@ -43,8 +43,8 @@ public class ReservarOficinaApi {
      *
      * @param context          the context
      * @param idOficina        the id oficina
-     * @param dataIniciReserva the data inici reserva
-     * @param dataFiReserva    the data fi reserva
+     * @param dataIniciReserva the data inici FacturaDetailFragment
+     * @param dataFiReserva    the data fi FacturaDetailFragment
      * @param codiAcces        the codi acces
      * @param url              the url
      * @throws JSONException the json exception

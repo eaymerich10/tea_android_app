@@ -105,7 +105,7 @@ public class LlistaReservesAdmin extends AppCompatActivity {
                         String idReserva = idReserves.get(i);
                         AlertDialog.Builder builder = new AlertDialog.Builder(LlistaReservesAdmin.this);
                         builder.setTitle("Eliminar Oficina");
-                        builder.setMessage("Realment vols eliminar la reserva?");
+                        builder.setMessage("Realment vols eliminar la FacturaDetailFragment?");
                         builder.setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
