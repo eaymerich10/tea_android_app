@@ -33,7 +33,7 @@ public class FacturacioAdmin extends AppCompatActivity {
         llistarFactures.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FacturacioAdmin.this, LlistatFactures.class);
+                Intent intent = new Intent(FacturacioAdmin.this, LlistatFacturesAdmin.class);
                 startActivity(intent);
             }
         });

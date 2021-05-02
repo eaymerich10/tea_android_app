@@ -220,10 +220,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_provincia_oficina_factura"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="234dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="120dp"
-        android:text="TextView"
+        android:layout_marginEnd="110dp"
+        android:text="@string/barcelona"
         android:textColor="#131313" />
 
     <TextView
@@ -231,10 +233,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_direccio_oficina_factura"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="234dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="120dp"
-        android:text="TextView"
+        android:layout_marginEnd="110dp"
+        android:text="@string/barcelona"
         android:textColor="#131313" />
 
     <TextView
@@ -266,10 +270,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_nom_corp_factura"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="234dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="120dp"
-        android:text="TextView"
+        android:layout_marginEnd="60dp"
+        android:text="@string/direccio_fem"
         android:textColor="#131313" />
 
 </RelativeLayout>

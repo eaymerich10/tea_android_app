@@ -72,4 +72,6 @@
     <string name="total_impostos">Total Impostos</string>
     <string name="impost_iva">Impost IVA</string>
     <string name="factura">Factura</string>
+    <string name="barcelona">Barcelona</string>
+    <string name="direccio_fem">AV. Paral·lel 71-73, 08004</string>
 </resources>

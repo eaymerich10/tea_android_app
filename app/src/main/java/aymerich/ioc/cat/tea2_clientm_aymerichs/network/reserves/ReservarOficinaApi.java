@@ -24,6 +24,8 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 
+import aymerich.ioc.cat.tea2_clientm_aymerichs.network.factures.CrearFacturaApi;
+
 /**
  *
  * Classe per fer la request al servidor per reservar una oficina
@@ -37,6 +39,10 @@ public class ReservarOficinaApi {
     private int codi = 0;
     private int codiError = 0;
     private String codiAcces = "";
+    private String idReserva = "";
+    private String idUsuari = "";
+    private String resposta = "";
+    private CrearFacturaApi crearFacturaApi;
 
     /**
      * Instantiates a new Reservar oficina api.
@@ -81,10 +87,12 @@ public class ReservarOficinaApi {
                 @Override
                 public void onResponse(String response) {
                     Log.i("LOG_RESPONSE", response);
-                    Log.i("LOG_RESPONSE", codiAcces);
+                    Log.i("LOG_RESPONSE", resposta);
                     switch (codi) {
                         case 200:
                             Toast.makeText(context, "Oficina Reservada", Toast.LENGTH_SHORT).show();
+                            crearFacturaApi = new CrearFacturaApi(context, idReserva, idUsuari, codiAcces, url);
+                            crearFacturaApi.Facturar();
                     }
                 }
             }, new Response.ErrorListener() {
@@ -98,13 +106,13 @@ public class ReservarOficinaApi {
                     Log.e("LOG_RESPONSE", error.toString());
                     if (error instanceof NetworkError) {
                         //handle your network error here.
-                        Toast.makeText(context, "Login Error 1", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
 
                     } else if (error instanceof ServerError) {
                         //handle if server error occurs with 5** status code
                         codiError = error.networkResponse.statusCode;
                         if (codiError == 400) {
-                            Toast.makeText(context, "L'usuari ja existeix!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "La oficina ja existeix!", Toast.LENGTH_SHORT).show();
                         }
 
                     } else if (error instanceof TimeoutError) {
@@ -150,8 +158,17 @@ public class ReservarOficinaApi {
                 protected Response<String> parseNetworkResponse(NetworkResponse response) {
                     String responseString = "";
                     if (response != null) {
+                        resposta = new String(response.data);
+                        try {
+                            JSONObject jsonObject = new JSONObject(resposta);
+                            idReserva = jsonObject.get("idReserva").toString();
+                            idUsuari = jsonObject.get("idUsuari").toString();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                         responseString = String.valueOf(response.statusCode);
                         codi = response.statusCode;
+
                     }
 
                     return Response.success(responseString, HttpHeaderParser.parseCacheHeaders(response));
