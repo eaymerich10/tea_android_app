@@ -8,13 +8,14 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.network.factures.LlistarFacturesApi;
 
 public class FacturacioAdmin extends AppCompatActivity {
     Button llistarFactures;
     private String codiAcces = "";
     private String url = "";
     private String rol = "";
-    //LlistarReservesApi llistarReservesApi;
+    LlistarFacturesApi llistarFacturesApi;
 
     /**
      * On create.
@@ -33,8 +34,8 @@ public class FacturacioAdmin extends AppCompatActivity {
         llistarFactures.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FacturacioAdmin.this, LlistatFacturesAdmin.class);
-                startActivity(intent);
+                llistarFacturesApi = new LlistarFacturesApi(FacturacioAdmin.this, url, codiAcces, rol);
+                llistarFacturesApi.llistar();
             }
         });
     }

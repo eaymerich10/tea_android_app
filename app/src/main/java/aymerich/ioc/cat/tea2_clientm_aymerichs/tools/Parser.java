@@ -3,6 +3,7 @@ package aymerich.ioc.cat.tea2_clientm_aymerichs.tools;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Factura;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Oficina;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Reserva;
 
@@ -59,5 +60,41 @@ public class Parser {
             e.printStackTrace();
         }
         return reserva;
+    }
+    public Factura parserStringToFactura(String facturaString){
+        Factura factura = new Factura(null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null);
+        try {
+            JSONObject jsonFactura = new JSONObject(facturaString);
+            factura.setIdFactura(jsonFactura.getString("idFactura"));
+            factura.setDataCreacio(jsonFactura.getString("dataCreacio"));
+            factura.setDataIniciReserva(jsonFactura.getJSONObject("idReserva").getString("dataIniciReserva"));
+            factura.setDataFinalReserva(jsonFactura.getJSONObject("idReserva").getString("dataFiReserva"));
+            factura.setImpostos(jsonFactura.getString("impostos"));
+            factura.setNomOficina(jsonFactura.getJSONObject("idReserva").getJSONObject("idOficina").getString("nom"));
+            factura.setNomUsuariReserva(jsonFactura.getJSONObject("idReserva").getJSONObject("idUsuari").getString("nom"));
+            factura.setIdReserva(jsonFactura.getJSONObject("idReserva").getString("idReserva"));
+            factura.setPreuOficina(jsonFactura.getJSONObject("idReserva").getJSONObject("idOficina").getString("preu"));
+            factura.setTipusOficina(jsonFactura.getJSONObject("idReserva").getJSONObject("idOficina").getString("tipus"));
+            factura.setServeisOficina(jsonFactura.getJSONObject("idReserva").getJSONObject("idOficina").getString("serveis"));
+            factura.setSubTotal(jsonFactura.getString("subTotal"));
+            factura.setTotal(jsonFactura.getString("total"));
+            factura.setIdUsuari(jsonFactura.getJSONObject("idReserva").getJSONObject("idUsuari").getString("idUsuari"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return factura;
     }
 }
