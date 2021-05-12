@@ -26,6 +26,11 @@ import java.io.UnsupportedEncodingException;
 
 import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.ResetURL;
 
+/**
+ *
+ * Classe per fer la request al servidor per crear factures.
+ *
+ */
 public class CrearFacturaApi {
     private String idReserva, idUsuari;
     String url = "";
@@ -37,6 +42,15 @@ public class CrearFacturaApi {
     private ResetURL resetURL;
 
 
+    /**
+     * Instantiates a new Crear factura api.
+     *
+     * @param context   the context
+     * @param idReserva the id reserva
+     * @param idUsuari  the id usuari
+     * @param codiAcces the codi acces
+     * @param url       the url
+     */
     public CrearFacturaApi(Context context, String idReserva, String idUsuari, String codiAcces, String url) {
         this.context = context;
         this.idReserva = idReserva;
@@ -47,7 +61,7 @@ public class CrearFacturaApi {
     }
 
     /**
-     * Reservar.
+     * Facturar.
      */
     public void Facturar() {
         try {

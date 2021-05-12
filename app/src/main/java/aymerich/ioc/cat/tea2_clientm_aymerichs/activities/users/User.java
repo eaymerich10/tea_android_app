@@ -16,8 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.MainActivity;
-import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.reserves.ReservesUser;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.factures.FacturacioClient;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.oficines.BuscarOficines;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.reserves.ReservesUser;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.users.CanviPassApi;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.users.LogoutApi;
 
@@ -116,28 +117,39 @@ public class User extends AppCompatActivity {
         });
         iv_canviarPass.setOnClickListener(new View.OnClickListener() {
 
-                                        @Override
-                                        public void onClick(View v) {
-                                            et_canvi.setVisibility(View.VISIBLE);
-                                            et_confirmarCanvi.setVisibility(View.VISIBLE);
-                                            bt_enviar.setVisibility(View.VISIBLE);
-                                            bt_cancelar.setVisibility(View.VISIBLE);
-                                            tv_nova_pass.setVisibility(View.VISIBLE);
-                                            tv_inici.setVisibility(View.INVISIBLE);
-                                            bt_veureReserves.setVisibility(View.INVISIBLE);
-                                            bt_reservarOficines.setVisibility(View.INVISIBLE);
-                                            bt_factures.setVisibility(View.INVISIBLE);
-                                            bt_logout.setVisibility(View.INVISIBLE);
-                                            bt_sortir.setVisibility(View.INVISIBLE);
-                                        }
-                                    }
+                                              @Override
+                                              public void onClick(View v) {
+                                                  et_canvi.setVisibility(View.VISIBLE);
+                                                  et_confirmarCanvi.setVisibility(View.VISIBLE);
+                                                  bt_enviar.setVisibility(View.VISIBLE);
+                                                  bt_cancelar.setVisibility(View.VISIBLE);
+                                                  tv_nova_pass.setVisibility(View.VISIBLE);
+                                                  tv_inici.setVisibility(View.INVISIBLE);
+                                                  bt_veureReserves.setVisibility(View.INVISIBLE);
+                                                  bt_reservarOficines.setVisibility(View.INVISIBLE);
+                                                  bt_factures.setVisibility(View.INVISIBLE);
+                                                  bt_logout.setVisibility(View.INVISIBLE);
+                                                  bt_sortir.setVisibility(View.INVISIBLE);
+                                              }
+                                          }
         );
+        bt_factures.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(User.this, FacturacioClient.class);
+                intent.putExtra("codiAcces", codiAcces);
+                intent.putExtra("url", url);
+                intent.putExtra("rol", rol);
+                User.this.startActivity(intent);
+            }
+        });
+
         bt_enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(et_canvi.getText().toString().trim().equals(et_confirmarCanvi.getText().toString().trim())){
+                if (et_canvi.getText().toString().trim().equals(et_confirmarCanvi.getText().toString().trim())) {
                     pass = et_canvi.getText().toString().trim();
-                }else {
+                } else {
                     et_confirmarCanvi.setError("La contrasenya no coincideix");
                 }
                 if (pass.length() >= 1) {
@@ -210,3 +222,4 @@ public class User extends AppCompatActivity {
     }
 
 }
+

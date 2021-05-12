@@ -10,6 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.factures.LlistarFacturesApi;
 
+/**
+ *
+ * Classe encarregada de la facturació del Administrador.
+ */
 public class FacturacioAdmin extends AppCompatActivity {
     Button llistarFactures;
     private String codiAcces = "";

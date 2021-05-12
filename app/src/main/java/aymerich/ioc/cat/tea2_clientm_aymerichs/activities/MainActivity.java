@@ -18,6 +18,7 @@ import org.json.JSONException;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.activities.users.Registre;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.network.users.LoginApi;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.HttpsActivate;
 
 /**
  * MainActivity
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tv_registre;
     Button btn_login;
     SharedPreferences sharedPreferences;
-    String url = "http://192.168.1.17:8080/";
+    HttpsActivate httpsActivate;
+    String url = "https://192.168.1.23:8443/";
     public static final String Sp_Status = "Status";
     public static final String MyPref = "MyPref";
     public String username, password, codiAcces;
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        httpsActivate = new HttpsActivate();
+        httpsActivate.activate();
         et_username = (EditText) findViewById(R.id.et_email_registre);
         et_password = (EditText) findViewById(R.id.et_password_registre);
         tv_registre = (TextView) findViewById(R.id.tv_registre);

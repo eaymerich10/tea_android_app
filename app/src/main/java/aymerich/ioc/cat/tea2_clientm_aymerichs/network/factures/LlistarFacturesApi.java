@@ -25,6 +25,11 @@ import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Factura;
 
 import static androidx.core.content.ContextCompat.startActivity;
 
+/**
+ *
+ * Classe per fer la request al servidor per llistar factures.
+ *
+ */
 public class LlistarFacturesApi {
 
     private String url;
@@ -38,7 +43,7 @@ public class LlistarFacturesApi {
     ArrayList<String> idFactures = new ArrayList<String>();
 
     /**
-     * Instantiates a new Llistar reserves api.
+     * Instantiates a new Llistar factures api.
      *
      * @param context   the context
      * @param url       the url
@@ -97,7 +102,7 @@ public class LlistarFacturesApi {
                                 factura.setIdUsuari(jresponse.getJSONObject("idReserva").getJSONObject("idUsuari").getString("idUsuari"));
                                 facturesString.add(jresponse.toString());
                                 idFactures.add(factura.getIdFactura());
-                                facturesFinal.add("ID Factura " + factura.getIdReserva() + " Nom Oficina " + factura.getNomOficina() + "\n ID Usuari " + factura.getIdUsuari());
+                                facturesFinal.add("ID Factura " + factura.getIdFactura() + " Nom Oficina " + factura.getNomOficina() + "\n ID Usuari " + factura.getIdUsuari());
                             }
                             if (rol.equals("ADMINISTRADOR")) {
                                 Intent intent = new Intent(context, LlistatFacturesAdmin.class);

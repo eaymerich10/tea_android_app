@@ -21,13 +21,13 @@ import java.util.ArrayList;
 
 import aymerich.ioc.cat.tea2_clientm_aymerichs.R;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.models.Factura;
-import aymerich.ioc.cat.tea2_clientm_aymerichs.network.reserves.EliminarReservaApi;
+import aymerich.ioc.cat.tea2_clientm_aymerichs.network.factures.EliminarFacturaApi;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.Parser;
 import aymerich.ioc.cat.tea2_clientm_aymerichs.tools.ResetURL;
 
 /**
  *
- * Classe encarregada de l'activity per llistar reserves del Administrador.
+ * Classe encarregada de l'activity per llistar factures del Administrador.
  * Sense comentaris a linies, ja que funciona igual que el llistat de oficines
  */
 public class LlistatFacturesAdmin extends AppCompatActivity {
@@ -58,7 +58,7 @@ public class LlistatFacturesAdmin extends AppCompatActivity {
         resetURL = new ResetURL();
         url = resetURL.resetUrl(url);
         facturesFinal = intent.getStringArrayListExtra("facturesFinal");
-        idfactures = intent.getStringArrayListExtra("idfactures");
+        idfactures = intent.getStringArrayListExtra("idFactures");
         facturesString = intent.getStringArrayListExtra("facturesString");
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(LlistatFacturesAdmin.this, android.R.layout.simple_list_item_1, facturesFinal);
         llistafactures.setAdapter(adapter);
@@ -124,15 +124,15 @@ public class LlistatFacturesAdmin extends AppCompatActivity {
 
                 for (int i = 0; i < facturesFinal.size(); i++) {
                     if (facturesFinal.get(i).equals(itemLlista)) {
-                        String idReserva = idfactures.get(i);
+                        String idFactura = idfactures.get(i);
                         AlertDialog.Builder builder = new AlertDialog.Builder(LlistatFacturesAdmin.this);
                         builder.setTitle("Eliminar Factura");
-                        builder.setMessage("Realment vols eliminar la faxtura?");
+                        builder.setMessage("Realment vols eliminar la factura?");
                         builder.setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                EliminarReservaApi eliminarReservaApi = new EliminarReservaApi(LlistatFacturesAdmin.this, url +"esborrafactura/", codiAcces, idReserva);
-                                eliminarReservaApi.Eliminar();
+                                EliminarFacturaApi eliminarFacturaApi = new EliminarFacturaApi(LlistatFacturesAdmin.this, url +"esborrarfactura/", codiAcces, idFactura);
+                                eliminarFacturaApi.Eliminar();
                                 finish();
 
                             }
